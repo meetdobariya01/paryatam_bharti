@@ -1,0 +1,53 @@
+.testimonial-wrapper {
+  background-color: #fffdf5;
+  overflow: hidden;
+  position: relative;
+}
+
+.testimonial-card {
+  background: #ffffff;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+.decor-left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 220px;
+  opacity: 0.9;
+  z-index: 0;
+}
+
+.decor-right {
+  position: absolute;
+  top: 60px;
+  right: 60px;
+  width: 120px;
+  opacity: 0.9;
+  z-index: 0;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .decor-left {
+    width: 140px;
+  }
+  .decor-right {
+    width: 80px;
+    top: 20px;
+    right: 20px;
+  }
+}

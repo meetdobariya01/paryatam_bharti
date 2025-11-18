@@ -1,0 +1,75 @@
+.footer-section {
+  background-color: #000;
+  color: #ccc;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+.form-control {
+  background: transparent;
+  border: 1px solid #444;
+  color: #fff;
+  height: 45px;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: #ffc107;
+}
+
+.btn-warning {
+  background-color: #ffeb3b;
+  border: none;
+  color: #000;
+  transition: 0.3s;
+}
+
+.btn-warning:hover {
+  background-color: #ffd600;
+}
+
+/* CTA PANEL */
+.cta-panel {
+  background-color: #111;
+  border: 1px solid #222;
+}
+
+.divider {
+  width: 1px;
+  height: 50px;
+  background: #333;
+}
+
+@media (max-width: 992px) {
+  .divider {
+    width: 100%;
+    height: 1px;
+  }
+}
+
+/* Social Icons */
+.social-icons a {
+  display: inline-flex;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #111;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background-color: #ffc107;
+  color: #000;
+}

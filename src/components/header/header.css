@@ -1,0 +1,73 @@
+/* General Header Styles */
+.animated-header {
+  background: #ffffff;
+  transition: all 0.4s ease;
+}
+
+/* Logo */
+.logo-img {
+  /* height: 40px; */
+  width: 100px;
+  border-radius: 50%;
+}
+
+/* Brand Name */
+.brand-text {
+  font-family: "Poppins", sans-serif;
+  color: #007bff !important;
+  display: flex;
+  align-items: center;
+}
+
+/* Nav Links */
+.nav-item-custom {
+  font-size: 1rem;
+  margin: 0 12px;
+  color: #333 !important;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-item-custom:hover {
+  color: #007bff !important;
+}
+
+/* Animated underline */
+.nav-item-custom::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #007bff;
+  transition: width 0.3s ease;
+}
+
+.nav-item-custom:hover::after {
+  width: 100%;
+}
+
+/* Login Button */
+.login-btn {
+  background: linear-gradient(90deg, #007bff, #00bfff);
+  border: none;
+  font-weight: 600;
+  box-shadow: 0 3px 10px rgba(0, 123, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  background: linear-gradient(90deg, #0062ff, #00a6ff);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
+}
+
+/* Sticky shadow animation on scroll */
+.animated-header.scrolled {
+  background: #f8f9fa;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+

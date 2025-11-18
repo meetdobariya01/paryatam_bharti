@@ -1,0 +1,51 @@
+.about-section {
+  background: linear-gradient(180deg, #f5f8ff 0%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.animated-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(
+      circle at 20% 20%,
+      rgba(0, 123, 255, 0.08),
+      transparent 70%
+    ),
+    radial-gradient(circle at 80% 80%, rgba(0, 200, 150, 0.08), transparent 70%);
+  animation: floatBg 12s infinite alternate ease-in-out;
+  z-index: 1;
+}
+
+@keyframes floatBg {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-40px, 40px);
+  }
+}
+
+img {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.team-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+.team-card {
+  transition: all 0.4s ease;
+}
+.team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}

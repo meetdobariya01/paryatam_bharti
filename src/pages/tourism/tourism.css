@@ -1,0 +1,49 @@
+/* App.css - animations & responsive tweaks */
+.hero {
+  background-attachment: fixed;
+  animation: heroEnter 1.6s ease both;
+}
+@keyframes heroEnter {
+  0% { opacity: 0; transform: translateY(20px) scale(1.02); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.sector-card {
+  transition: transform .35s cubic-bezier(.2,.9,.3,1), box-shadow .35s;
+}
+.sector-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(10,20,40,0.12);
+}
+
+/* timeline simple styling */
+.timeline li {
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  position: relative;
+}
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 6px;
+  width: 8px;
+  height: 8px;
+  background: #ffc107;
+  border-radius: 50%;
+}
+
+/* accordion visuals */
+.accordion-button:not(.collapsed) {
+  color: #0b1a2b;
+  background-color: rgba(255,193,7,0.08);
+}
+
+/* responsive tweak */
+@media (max-width: 768px) {
+  .hero { background-attachment: scroll; min-height: 60vh; }
+  .display-4 { font-size: 2rem; }
+}
+
+/* utility */
+.max-w-800 { max-width: 800px; margin: 0 auto; }

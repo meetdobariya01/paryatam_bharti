@@ -1,0 +1,180 @@
+.contact-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url("https://images.unsplash.com/photo-1529778873920-4da4926a72c2?auto=format&fit=crop&w=1920&q=80")
+      no-repeat center center/cover;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+/* ✨ Soft sunlight overlay */
+.contact-section::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: -10%;
+  width: 120%;
+  height: 150%;
+  background: radial-gradient(
+    circle at top right,
+    rgba(255, 215, 100, 0.2),
+    transparent 70%
+  );
+  animation: sunGlow 10s ease-in-out infinite alternate;
+  z-index: 0;
+}
+
+@keyframes sunGlow {
+  0% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+}
+
+/* 🍃 Floating leaves animation */
+.contact-section::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("https://cdn.pixabay.com/photo/2014/04/02/17/08/leaves-308466_1280.png")
+    repeat;
+  background-size: 250px;
+  opacity: 0.08;
+  animation: floatLeaves 40s linear infinite;
+  z-index: 1;
+}
+
+@keyframes floatLeaves {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 1000px 500px;
+  }
+}
+
+/* 🌟 Animated radial glow */
+.animated-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 215, 0, 0.15),
+    transparent 70%
+  );
+  animation: pulse 6s infinite ease-in-out;
+  z-index: 0;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+}
+
+/* ========================
+   Contact Info Card
+======================== */
+.contact-info {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: all 0.5s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.contact-info:hover {
+  transform: translateY(-6px);
+  border-color: #ffd700;
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.25);
+}
+
+.contact-info h5 {
+  color: #ffda79;
+  font-weight: 600;
+}
+
+/* ========================
+   Form Styling
+======================== */
+.form-control {
+  border-radius: 14px;
+  border: 1px solid #ccc;
+  padding: 12px 16px;
+  transition: 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #ffcc33;
+  box-shadow: 0 0 12px rgba(255, 193, 7, 0.5);
+}
+
+/* Buttons */
+button.btn-warning {
+  background: linear-gradient(45deg, #ffca28, #ffd54f);
+  border: none;
+  color: #333;
+  font-weight: 600;
+  transition: all 0.4s ease;
+}
+
+button.btn-warning:hover {
+  background: linear-gradient(45deg, #ffe082, #ffca28);
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+}
+
+/* ========================
+   Map Section
+======================== */
+.map-container iframe {
+  border: none;
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.2);
+}
+
+/* ========================
+   Responsive Design
+======================== */
+@media (max-width: 992px) {
+  .contact-section {
+    text-align: center;
+    padding: 60px 20px;
+  }
+  .contact-info {
+    margin-bottom: 30px;
+  }
+  .contact-section h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .form-control {
+    font-size: 14px;
+  }
+  button.btn-warning {
+    padding: 10px 25px;
+  }
+}

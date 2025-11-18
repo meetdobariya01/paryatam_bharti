@@ -1,0 +1,45 @@
+.popular-spots {
+  background-color: #e8f8f8;
+}
+
+.spot-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.spot-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.img-container {
+  overflow: hidden;
+  border-radius: 16px 16px 0 0;
+}
+
+.spot-card img {
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.spot-card:hover img {
+  transform: scale(1.05);
+}
+
+.dropdown-toggle {
+  font-weight: 500;
+  border: none !important;
+}
+
+.dropdown-toggle:focus {
+  box-shadow: none !important;
+}
+
+@media (max-width: 768px) {
+  .spot-card img {
+    height: 180px;
+  }
+}

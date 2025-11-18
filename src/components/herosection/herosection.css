@@ -1,0 +1,89 @@
+.hero-section {
+  background: linear-gradient(180deg, #fffdf7, #fdfcfb);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Explore button */
+.explore-btn {
+  background-color: #f7f8ff;
+  color: #007bff;
+  border: 2px solid #007bff;
+  transition: all 0.3s ease;
+}
+.explore-btn:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Booking box */
+.booking-box {
+  max-width: 540px;
+}
+
+/* Tabs */
+.tab-btn {
+  border: none;
+  background-color: transparent;
+  color: #555;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.tab-btn.active,
+.tab-btn:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Search button */
+.search-btn {
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+.search-btn:hover {
+  background-color: #0056d2;
+}
+
+/* Hotline */
+.hotline-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ffe8e8;
+  color: #ff3b3b;
+  font-size: 1.2rem;
+}
+.hotline h5 {
+  color: #ff3b3b;
+}
+
+/* Hero image */
+.hero-img {
+  max-width: 90%;
+  height: auto;
+  animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .booking-box {
+    max-width: 100%;
+  }
+  .hero-img {
+    max-width: 80%;
+  }
+}
