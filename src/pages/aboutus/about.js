@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import "./about.css";
 import Header from "../../components/header/header";
+import Footer from "../../components/footer/footer";
 
 const About = () => {
   return (
@@ -261,6 +262,9 @@ const About = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };

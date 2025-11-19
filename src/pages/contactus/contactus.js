@@ -9,6 +9,7 @@ import {
 } from "react-icons/fa";
 import "./contactus.css";
 import Header from "../../components/header/header";
+import Footer from "../../components/footer/footer";
 
 const Contactus = () => {
   return (
@@ -232,6 +233,9 @@ const Contactus = () => {
           </motion.div>
         </Container>
       </section>
+
+      {/* Footer Section */}
+      <Footer />
     </div>
   );
 };

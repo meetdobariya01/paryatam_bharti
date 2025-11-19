@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -23,13 +24,13 @@ const Footer = () => {
               >
                 <div className="d-flex align-items-center mb-3">
                   <img
-                    src="https://cdn-icons-png.flaticon.com/512/869/869869.png"
+                    src="./images/logo.png"
                     alt="Travila"
-                    width="36"
-                    height="36"
+                    width="100"
+                    height="100"
                     className="me-2"
                   />
-                  <h5 className="fw-bold text-white mb-0">Travila</h5>
+                  {/* <h5 className="fw-bold text-white mb-0">Travila</h5>   */}
                 </div>
                 <p className="small text-secondary">
                   Dive into local recommendations for a truly authentic
@@ -56,12 +57,52 @@ const Footer = () => {
             {/* Company Links */}
             <Col lg={2} md={3} sm={6} data-aos="fade-up">
               <h6 className="fw-semibold text-white mb-3">Company</h6>
+
               <ul className="list-unstyled small text-secondary">
-                <li>About Us</li>
-                <li>Community Blog</li>
-                <li>Jobs & Careers</li>
-                <li>Contact Us</li>
-                <li>Our Awards</li>
+                <li>
+                  <NavLink
+                    to="/aboutus"
+                    className="text-light text-decoration-none"
+                  >
+                    About Us
+                  </NavLink>
+                </li>
+
+                <li>
+                  <NavLink
+                    to="/blog"
+                    className="text-light text-decoration-none"
+                  >
+                    Community Blog
+                  </NavLink>
+                </li>
+
+                <li>
+                  <NavLink
+                    to="/careers"
+                    className="text-light text-decoration-none"
+                  >
+                    Jobs & Careers
+                  </NavLink>
+                </li>
+
+                <li>
+                  <NavLink
+                    to="/contactus"
+                    className="text-light text-decoration-none"
+                  >
+                    Contact Us
+                  </NavLink>
+                </li>
+
+                <li>
+                  <NavLink
+                    to="/awards"
+                    className="text-light text-decoration-none"
+                  >
+                    Our Awards
+                  </NavLink>
+                </li>
               </ul>
             </Col>
 
